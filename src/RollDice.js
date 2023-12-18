@@ -12,6 +12,7 @@ class RollDice extends Component {
     this.roll = this.roll.bind(this); // manually bind , we can rid of by making the roll function an arrow func
   }
   roll() {
+    // we may make it arrow function and delete constructor and super and this of initial state, and also the manual bind
     //pick 2 new rolls
     const newDie1 =
       this.props.sides[Math.floor(Math.random() * this.props.sides.length)]; // index of []
@@ -29,6 +30,7 @@ class RollDice extends Component {
     return (
       <div className="RollDice">
         <div className="RollDice-container">
+          {/* making props to the die components  */}
           <Die face={this.state.die1} rolling={this.state.rolling} />
           <Die face={this.state.die2} rolling={this.state.rolling} />
         </div>

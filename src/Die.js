@@ -13,3 +13,5 @@ class Die extends Component {
   }
 }
 export default Die;
+
+// Note: number five is not working due to code imported from flaticon not specify this digit
